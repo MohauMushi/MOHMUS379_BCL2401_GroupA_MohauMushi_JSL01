@@ -4,11 +4,13 @@ function validateSyntax() {
     let result = ''; // Placeholder for validation result
 
     // TODO: Write your validation logic here
-        // Check if input starts with 'pet_' and followed by alphanumeric characters
+       /*The code below declares a variable petSyntax using the let and assigns a Regular expression to match strings that start with 'pet_', followed by exactly 4 digits of a year, 
+       and then one or more alphabetical characters. */
+        let petSyntax = /^pet_[0-9]{4}[a-zA-Z]+$/;
         
-        /*The code below checks if the input follows a specific syntax pattern starting with "pet_". 
-        If it does, it sets the result variable to "Valid Syntax 🟢", otherwise it sets it to "Invalid Syntax 🔴" */
-        if(/^pet_[a-zA-Z0-9]+$/.test(input)){
+        /*The code below checks if the input follows a specific syntax pattern starting with "pet_" and followed by alphanumeric characters
+         in the Regular Expression above. If it does, it sets the result variable to "Valid Syntax 🟢", otherwise it sets it to "Invalid Syntax 🔴" */
+        if(petSyntax.test(input)){
             result = "Valid Syntax 🟢";
          } else {
             result = "Invalid Syntax 🔴";
